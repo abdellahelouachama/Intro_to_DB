@@ -1,2 +1,4 @@
 USE alx_book_store;
-SELECT Books.title, Authors.author_name FROM Books JOIN Authors ON Books.author_id = Authors.author_id
+SELECT COLUMN_NAME, DATA_TYPE, IS_NULLABLE, COLUMN_DEFAULT
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'Books';
