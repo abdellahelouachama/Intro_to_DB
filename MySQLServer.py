@@ -6,8 +6,8 @@ try:
         user="root",
         password="Doulingo2023@",
     )
-except Exception:
-    print("Unable to connect to MySQL server.")
+except mysql.connector.Error as err:
+    print(err)
 else:
     mycursor = mydb.cursor()
 
